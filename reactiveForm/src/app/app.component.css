@@ -1,0 +1,11 @@
+input.ng-invalid.ng-touched{
+    border: 3px solid red;
+}
+
+input.ng-valid.ng-dirty, select.ng-valid.ng-dirty {
+    border: 3px solid rgb(159, 226, 26);
+}
+
+form {
+    background-color: blanchedalmond;
+}
