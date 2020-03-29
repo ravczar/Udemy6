@@ -10,11 +10,11 @@
 
         OK   Display a warning message if the Form is invalid AND was touched. Display a warning message below each input if it's invalid.
 
-           Upon submitting the form, you should simply print the Value of the Form to the Console.
-           Optionally, display it in your template.
+        OK   Upon submitting the form, you should simply print the Value of the Form to the Console.
+        OK   Optionally, display it in your template.
       -->
       
-      <form (ngSubmit)="onSubmitForm()" #simpleForm>
+      <form (ngSubmit)="onSubmitForm()" #simpleForm="ngForm">
         <h3> Lecture 6 Udemy</h3>
         <!-- Email input form-group-->
         <div class="form-group">
@@ -72,9 +72,15 @@
           type="submit"
           [disabled]="!simpleForm.valid">Submit</button>
       </form>
-
-      
-
+    </div>
+  </div>
+  <hr>
+  <div class="row" *ngIf="simpleForm.valid">
+    <div class="summary">
+      <h3> Your Data</h3>
+      <p>User Email: {{user.getEmail()}}</p>
+      <p>User Subscription: {{user.getSubscription()}}</p>
+      <p>User Password: {{user.getPassword()}}</p>   
     </div>
   </div>
 </div>
