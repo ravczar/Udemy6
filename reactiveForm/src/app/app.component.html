@@ -75,7 +75,7 @@
     </div>
   </div>
   <hr>
-  <div class="row" *ngIf="simpleForm.valid">
+  <div class="row" *ngIf="simpleForm.valid && formSubmited">
     <div class="summary">
       <h3> Your Data</h3>
       <p>User Email: {{user.getEmail()}}</p>
